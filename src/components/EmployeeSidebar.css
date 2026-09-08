@@ -1,0 +1,291 @@
+/* ========================================
+   EMPLOYEE SIDEBAR
+======================================== */
+
+.employee-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 260px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+
+  z-index: 1000;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.employee-sidebar-header {
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.employee-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.employee-sidebar-logo {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.employee-sidebar-brand-text h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.employee-sidebar-brand-text span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #9ca3af;
+
+  font-size: 10px;
+}
+
+
+/* ========================================
+   CLOSE BUTTON
+======================================== */
+
+.employee-sidebar-close {
+  display: none;
+
+  width: 34px;
+  height: 34px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+  color: #6b7280;
+
+  cursor: pointer;
+}
+
+.employee-sidebar-close:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.employee-sidebar-content {
+  flex: 1;
+
+  padding: 22px 14px;
+
+  overflow-y: auto;
+}
+
+.employee-sidebar-section-title {
+  margin: 0 0 9px;
+  padding: 0 10px;
+
+  color: #9ca3af;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+.employee-account-title {
+  margin-top: 27px;
+}
+
+
+/* ========================================
+   MENU
+======================================== */
+
+.employee-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.employee-sidebar-link {
+  min-height: 43px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 0 12px;
+
+  border-radius: 8px;
+
+  color: #6b7280;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.employee-sidebar-link svg {
+  flex-shrink: 0;
+}
+
+.employee-sidebar-link:hover {
+  background: #f3f6fb;
+  color: #2563eb;
+}
+
+.employee-sidebar-link.active {
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.employee-sidebar-footer {
+  padding: 14px;
+
+  border-top: 1px solid #f0f1f3;
+}
+
+.employee-logout-button {
+  width: 100%;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 0 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #6b7280;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.employee-logout-button:hover {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+.employee-sidebar-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.employee-sidebar-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.employee-sidebar-content::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+
+/* ========================================
+   TABLET / MOBILE
+======================================== */
+
+@media (max-width: 900px) {
+
+  .employee-sidebar {
+    transform: translateX(-100%);
+
+    box-shadow: none;
+  }
+
+  .employee-sidebar.employee-sidebar-open {
+    transform: translateX(0);
+
+    box-shadow:
+      10px 0 30px rgba(
+        0,
+        0,
+        0,
+        0.08
+      );
+  }
+
+  .employee-sidebar-close {
+    display: flex;
+  }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 500px) {
+
+  .employee-sidebar {
+    width: 280px;
+  }
+}

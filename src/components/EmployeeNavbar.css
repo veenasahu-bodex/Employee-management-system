@@ -1,0 +1,224 @@
+/* ========================================
+   EMPLOYEE NAVBAR
+======================================== */
+
+.employee-navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 260px;
+
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 26px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  z-index: 900;
+}
+
+
+/* ========================================
+   LEFT
+======================================== */
+
+.employee-navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.employee-navbar-menu {
+  display: none;
+
+  width: 38px;
+  height: 38px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #374151;
+
+  cursor: pointer;
+}
+
+.employee-navbar-menu:hover {
+  background: #f9fafb;
+}
+
+.employee-navbar-title span {
+  color: #374151;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* ========================================
+   RIGHT
+======================================== */
+
+.employee-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+
+/* ========================================
+   NOTIFICATION
+======================================== */
+
+.employee-navbar-notification {
+  position: relative;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #6b7280;
+
+  cursor: pointer;
+}
+
+.employee-navbar-notification:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.employee-notification-dot {
+  position: absolute;
+
+  top: 8px;
+  right: 8px;
+
+  width: 7px;
+  height: 7px;
+
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+
+  background: #ef4444;
+}
+
+
+/* ========================================
+   PROFILE
+======================================== */
+
+.employee-navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding-left: 16px;
+
+  border-left: 1px solid #e5e7eb;
+}
+
+.employee-navbar-avatar {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.employee-navbar-user {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.employee-navbar-user strong {
+  color: #111827;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.employee-navbar-user span {
+  color: #9ca3af;
+
+  font-size: 10px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .employee-navbar {
+    left: 0;
+    height: 72px;
+
+    padding: 0 20px;
+  }
+
+  .employee-navbar-menu {
+    display: flex;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .employee-navbar {
+    height: 64px;
+
+    padding: 0 14px;
+  }
+
+  .employee-navbar-right {
+    gap: 8px;
+  }
+
+  .employee-navbar-profile {
+    padding-left: 8px;
+    border-left: none;
+  }
+
+  .employee-navbar-user {
+    display: none;
+  }
+
+  .employee-navbar-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .employee-navbar-title span {
+    font-size: 13px;
+  }
+}

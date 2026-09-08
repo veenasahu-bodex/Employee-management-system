@@ -1,0 +1,37 @@
+.app-layout {
+  min-height: 100vh;
+  background: #f7f8fc;
+}
+
+.main-area {
+  margin-left: 260px;
+  min-height: 100vh;
+}
+
+.page-content {
+  padding: 28px;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .main-area {
+    margin-left: 0;
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 999;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-content {
+    padding: 18px;
+  }
+}
