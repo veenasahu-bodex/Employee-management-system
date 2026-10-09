@@ -40,10 +40,8 @@ const Dashboard = () => {
   const [message, setMessage] =
     useState("");
 
-  // ========================================
+  
   // LOAD DASHBOARD DATA
-  // ========================================
-
   const loadDashboard = async () => {
     try {
       setError("");
@@ -124,20 +122,14 @@ const Dashboard = () => {
     loadDashboard();
   }, []);
 
-  // ========================================
   // REFRESH
-  // ========================================
-
   const handleRefresh = async () => {
     setRefreshing(true);
 
     await loadDashboard();
   };
 
-  // ========================================
   // CHECK IN
-  // ========================================
-
   const handleCheckIn = async () => {
     try {
       setActionLoading(true);
@@ -171,10 +163,7 @@ const Dashboard = () => {
     }
   };
 
-  // ========================================
   // CHECK OUT
-  // ========================================
-
   const handleCheckOut = async () => {
     try {
       setActionLoading(true);
@@ -208,10 +197,7 @@ const Dashboard = () => {
     }
   };
 
-  // ========================================
   // FORMAT TIME
-  // ========================================
-
   const formatTime = (date) => {
     if (!date) return "-";
 
@@ -224,10 +210,7 @@ const Dashboard = () => {
     );
   };
 
-  // ========================================
   // FORMAT DATE
-  // ========================================
-
   const formatDate = (date) => {
     if (!date) return "-";
 
@@ -241,10 +224,8 @@ const Dashboard = () => {
     );
   };
 
-  // ========================================
-  // ATTENDANCE STATS
-  // ========================================
 
+  // ATTENDANCE STATS
   const presentCount =
     attendance.filter(
       (item) =>
@@ -281,10 +262,7 @@ const Dashboard = () => {
   const recentLeaves =
     leaves.slice(0, 4);
 
-  // ========================================
   // LOADING
-  // ========================================
-
   if (loading) {
     return (
       <div className="employee-dashboard-page">
@@ -301,10 +279,7 @@ const Dashboard = () => {
     );
   }
 
-  // ========================================
   // UI
-  // ========================================
-
   return (
     <div className="employee-dashboard-page">
 
@@ -346,7 +321,6 @@ const Dashboard = () => {
       </div>
 
       {/* MESSAGE */}
-
       {message && (
         <div className="employee-success">
           {message}
@@ -354,7 +328,6 @@ const Dashboard = () => {
       )}
 
       {/* ERROR */}
-
       {error && (
         <div className="employee-error">
           {error}
@@ -362,7 +335,6 @@ const Dashboard = () => {
       )}
 
       {/* TODAY ATTENDANCE */}
-
       <div className="employee-today-card">
 
         <div className="today-card-info">
@@ -388,7 +360,6 @@ const Dashboard = () => {
         <div className="today-attendance-details">
 
           <div className="time-detail">
-
             <span>
               <LogIn size={15} />
               Check In
@@ -399,11 +370,9 @@ const Dashboard = () => {
                 todayAttendance?.checkIn
               )}
             </strong>
-
           </div>
 
           <div className="time-detail">
-
             <span>
               <LogOut size={15} />
               Check Out
@@ -414,11 +383,9 @@ const Dashboard = () => {
                 todayAttendance?.checkOut
               )}
             </strong>
-
           </div>
 
           <div className="time-detail">
-
             <span>
               <Clock size={15} />
               Working Hours
@@ -429,7 +396,6 @@ const Dashboard = () => {
                 ? `${todayAttendance.workingHours} hrs`
                 : "-"}
             </strong>
-
           </div>
 
           <div className="today-action">
@@ -480,7 +446,6 @@ const Dashboard = () => {
       </div>
 
       {/* STATS */}
-
       <div className="employee-stats">
 
         <div className="employee-stat-card">
@@ -562,11 +527,9 @@ const Dashboard = () => {
       </div>
 
       {/* CONTENT GRID */}
-
       <div className="employee-dashboard-grid">
 
         {/* RECENT ATTENDANCE */}
-
         <div className="employee-dashboard-card">
 
           <div className="employee-card-header">
@@ -664,7 +627,6 @@ const Dashboard = () => {
         </div>
 
         {/* LEAVE SUMMARY */}
-
         <div className="employee-dashboard-card">
 
           <div className="employee-card-header">
@@ -743,7 +705,6 @@ const Dashboard = () => {
       </div>
 
       {/* PROFILE CARD */}
-
       <div className="employee-profile-card">
 
         <div className="employee-profile-avatar">
@@ -794,9 +755,7 @@ const Dashboard = () => {
           </strong>
 
         </div>
-
       </div>
-
     </div>
   );
 };

@@ -78,19 +78,11 @@ const MyAttendance = () => {
     loadAttendance();
   }, []);
 
-  // ========================================
-  // REFRESH
-  // ========================================
-
   const handleRefresh = async () => {
     setRefreshing(true);
 
     await loadAttendance();
   };
-
-  // ========================================
-  // FORMAT DATE
-  // ========================================
 
   const formatDate = (date) => {
     if (!date) return "-";
@@ -105,10 +97,6 @@ const MyAttendance = () => {
     );
   };
 
-  // ========================================
-  // FORMAT TIME
-  // ========================================
-
   const formatTime = (date) => {
     if (!date) return "-";
 
@@ -121,9 +109,6 @@ const MyAttendance = () => {
     );
   };
 
-  // ========================================
-  // FILTER DATE
-  // ========================================
 
   const isDateInRange = (date) => {
     if (dateFilter === "All") {
@@ -156,10 +141,6 @@ const MyAttendance = () => {
 
     return true;
   };
-
-  // ========================================
-  // FILTER ATTENDANCE
-  // ========================================
 
   const filteredAttendance = useMemo(() => {
     return attendance.filter((item) => {
@@ -195,9 +176,6 @@ const MyAttendance = () => {
     dateFilter,
   ]);
 
-  // ========================================
-  // SUMMARY
-  // ========================================
 
   const presentCount =
     attendance.filter(
@@ -239,9 +217,7 @@ const MyAttendance = () => {
         ).toFixed(2)
       : "0.00";
 
-  // ========================================
-  // STATUS CLASS
-  // ========================================
+
 
   const getStatusClass = (status) => {
     return (
@@ -251,9 +227,6 @@ const MyAttendance = () => {
     );
   };
 
-  // ========================================
-  // LOADING
-  // ========================================
 
   if (loading) {
     return (
@@ -271,9 +244,6 @@ const MyAttendance = () => {
     );
   }
 
-  // ========================================
-  // UI
-  // ========================================
 
   return (
     <div className="my-attendance-page">

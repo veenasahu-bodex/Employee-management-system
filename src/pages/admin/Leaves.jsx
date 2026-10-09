@@ -7,31 +7,23 @@ import {
   Check,
   X,
 } from "lucide-react";
-
 import api from "../../services/api";
-
 import "./Leaves.css";
 
 const Leaves = () => {
   const [leaves, setLeaves] = useState([]);
-
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] =
     useState("All");
-
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] =
     useState(false);
-
   const [processingId, setProcessingId] =
     useState(null);
-
   const [error, setError] = useState("");
 
-  // ========================================
+  
   // LOAD LEAVES
-  // ========================================
-
   const loadLeaves = async () => {
     try {
       setError("");
@@ -69,20 +61,14 @@ const Leaves = () => {
     loadLeaves();
   }, []);
 
-  // ========================================
   // REFRESH
-  // ========================================
-
   const handleRefresh = async () => {
     setRefreshing(true);
 
     await loadLeaves();
   };
 
-  // ========================================
   // APPROVE LEAVE
-  // ========================================
-
   const handleApprove = async (leaveId) => {
     const confirmApprove =
       window.confirm(
@@ -119,10 +105,7 @@ const Leaves = () => {
     }
   };
 
-  // ========================================
   // REJECT LEAVE
-  // ========================================
-
   const handleReject = async (leaveId) => {
     const confirmReject =
       window.confirm(
@@ -159,10 +142,7 @@ const Leaves = () => {
     }
   };
 
-  // ========================================
   // FORMAT DATE
-  // ========================================
-
   const formatDate = (date) => {
     if (!date) return "-";
 
@@ -176,10 +156,7 @@ const Leaves = () => {
     );
   };
 
-  // ========================================
   // CALCULATE LEAVE DAYS
-  // ========================================
-
   const calculateDays = (
     startDate,
     endDate
@@ -206,10 +183,7 @@ const Leaves = () => {
     );
   };
 
-  // ========================================
   // FILTER
-  // ========================================
-
   const filteredLeaves = useMemo(() => {
     return leaves.filter((leave) => {
       const employee =
@@ -247,10 +221,7 @@ const Leaves = () => {
     statusFilter,
   ]);
 
-  // ========================================
   // COUNTS
-  // ========================================
-
   const pendingCount =
     leaves.filter(
       (leave) =>
@@ -269,10 +240,7 @@ const Leaves = () => {
         leave.status === "Rejected"
     ).length;
 
-  // ========================================
   // LOADING
-  // ========================================
-
   if (loading) {
     return (
       <div className="leaves-page">
@@ -287,10 +255,7 @@ const Leaves = () => {
     );
   }
 
-  // ========================================
   // UI
-  // ========================================
-
   return (
     <div className="leaves-page">
 
@@ -332,7 +297,6 @@ const Leaves = () => {
 
 
       {/* ERROR */}
-
       {error && (
         <div className="leaves-error">
           {error}
@@ -341,7 +305,6 @@ const Leaves = () => {
 
 
       {/* STATS */}
-
       <div className="leaves-stats">
 
         <div className="leaves-stat-card">
@@ -427,7 +390,6 @@ const Leaves = () => {
 
 
       {/* FILTER CARD */}
-
       <div className="leaves-card">
 
         <div className="leaves-filters">

@@ -5,7 +5,6 @@
 }
 
 /* HEADER */
-
 .employees-header {
   display: flex;
   align-items: center;
@@ -50,7 +49,6 @@
 }
 
 /* STATS */
-
 .employee-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -128,7 +126,6 @@
 }
 
 /* SEARCH */
-
 .employees-toolbar {
   margin-bottom: 20px;
   padding: 18px 20px;
@@ -175,7 +172,6 @@
 }
 
 /* ERROR */
-
 .employees-error {
   margin-bottom: 20px;
   padding: 13px 16px;
@@ -188,7 +184,6 @@
 }
 
 /* TABLE CARD */
-
 .employees-table-card {
   overflow: hidden;
   border: 1px solid #e5e7eb;
@@ -240,7 +235,6 @@
 }
 
 /* EMPLOYEE NAME */
-
 .employee-name-cell {
   display: flex;
   align-items: center;
@@ -276,7 +270,6 @@
 }
 
 /* STATUS */
-
 .employee-status {
   display: inline-flex;
   align-items: center;
@@ -300,7 +293,6 @@
 }
 
 /* ACTIONS */
-
 .employee-actions {
   display: flex;
   align-items: center;
@@ -337,7 +329,6 @@
 }
 
 /* LOADING */
-
 .employees-loading {
   min-height: 280px;
   display: flex;
@@ -349,7 +340,6 @@
 }
 
 /* EMPTY */
-
 .employees-empty {
   min-height: 320px;
   display: flex;
@@ -379,7 +369,6 @@
 }
 
 /* MODAL */
-
 .employee-modal-overlay {
   position: fixed;
   inset: 0;
@@ -416,7 +405,6 @@
 }
 
 /* MODAL HEADER */
-
 .employee-modal-header {
   display: flex;
   align-items: flex-start;
@@ -461,7 +449,6 @@
 }
 
 /* FORM */
-
 .employee-form {
   padding: 24px 26px 26px;
 }
@@ -516,7 +503,6 @@
 }
 
 /* FORM ACTIONS */
-
 .employee-modal-actions {
   display: flex;
   justify-content: flex-end;
@@ -562,7 +548,6 @@
 }
 
 /* DETAILS MODAL */
-
 .employee-details-modal {
   max-width: 600px;
 }
@@ -633,7 +618,6 @@
 }
 
 /* RESPONSIVE */
-
 @media (max-width: 1000px) {
   .employee-stats {
     grid-template-columns: repeat(3, 1fr);
